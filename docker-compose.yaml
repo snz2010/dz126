@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 10001:80
+    volumes:
+      - ./volumes:/code/volumes
+    environment:
+      FLASK_APP: "app.py"
+      FLASK_ENV: 'production'
