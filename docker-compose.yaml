@@ -4,10 +4,12 @@ services:
   app:
     build:
       context: .
+    image: myimage
+    container_name: my_doc
     ports:
       - 10001:80
-    volumes:
-      - ./volumes:/code/volumes
     environment:
       FLASK_APP: "app.py"
       FLASK_ENV: 'production'
+    volumes:
+      - ./db:/db
