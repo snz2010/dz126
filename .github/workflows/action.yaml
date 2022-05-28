@@ -7,7 +7,8 @@ jobs:
       # Копируем код из репозитория в runner
       - name: clone code
         uses: actions/checkout@v2
-#	  # Собираем
-#      - name: docker build
-#        #run: docker build -t my-image .
-#        run: docker build -t snz2010/lesson26:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+	  # Собираем
+      - name: docker build
+        #run: docker build -t my-image .
+        run: docker build -t snz2010/lesson26:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+
