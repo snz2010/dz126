@@ -11,8 +11,3 @@ jobs:
       - name: docker build
         #run: docker build -t my-image .
         run: docker build -t snz2010/lesson26:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
-#      - name: docker login
-#        run:
-#      - name: docker push
-#        run:
-
