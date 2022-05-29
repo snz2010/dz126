@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    # версия на Д-Хабе
+    image: snz2010/hw26:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+    container_name: my_doc
+    ports:
+      - 10001:80
+    environment:
+      FLASK_APP: "app.py"
+      FLASK_ENV: 'production'
+    volumes:
+      - ./db:/db
