@@ -17,6 +17,6 @@ jobs:
       - name: docker Build
         uses: docker/build-push-action@v2
         #run: docker build -t my-image .
-        run: docker build -t snz2010/dz26:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+        run: docker build -t snz2010/hw26:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
       - name: docker push
-        run: docker push snz2010/dz26:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+        run: docker push snz2010/hw26:$GITHUB_REF_NAME-$GITHUB_RUN_ID
